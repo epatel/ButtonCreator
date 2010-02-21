@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#
+# To run "me" from within Xcode :: ctrl-click "me" and select "Open With Finder"
+#
+
+# Leave a message in the terminal shell that will opened for this file
+
+clear
+
+cat <<EOF
+ 
+You can minimize this window and the LOG_MONITOR will still run and 
+pick up the instructions...
+
+To close, either press ctrl-c or just close window 
+
+EOF
+
+#
+# monitor the system log and open filenames after any "open-button" text
+#
+tail -0 -f /var/log/system.log | awk -F open-button '/open-button/ { system("open " $2); }'
+
