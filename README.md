@@ -1,0 +1,3 @@
+Please see the blog entry for what this project is for...
+
+[http://memention.com/blog/2010/02/22/Make-it-work.html](http://memention.com/blog/2010/02/22/Make-it-work.html)
